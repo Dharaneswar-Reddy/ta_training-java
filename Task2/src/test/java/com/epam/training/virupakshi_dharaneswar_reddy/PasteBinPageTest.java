@@ -18,7 +18,7 @@ public class PasteBinPageTest {
     }
 
     @Test
-    public void testCreateNewPaste() throws InterruptedException {
+    public void testCreateNewPaste() {
         PasteBinPage pasteBinPage = new PasteBinPage(driver);
 
         String code =  """
@@ -29,7 +29,6 @@ public class PasteBinPageTest {
         String title = "how to gain dominance among developers";
 
         pasteBinPage.enterPasteCode(code);
-        Thread.sleep(2000);
         pasteBinPage.selectSyntaxHighlighting();
         pasteBinPage.selectPasteExpiration();
         pasteBinPage.enterPasteName(title);
