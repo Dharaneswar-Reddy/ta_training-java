@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="pastebin">
+    <test name="Create">
+        <classes>
+            <class name="com.epam.training.virupakshi_dharaneswar_reddy.PasteBinPageTest">
+                <parameter name="browser" value="edge"/>
+                <methods>
+                    <include name="testPasteBinPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
