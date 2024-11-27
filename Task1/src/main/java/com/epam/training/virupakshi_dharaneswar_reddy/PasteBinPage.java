@@ -30,12 +30,9 @@ public class PasteBinPage {
 
     public void createNewPaste(String text, String title) throws InterruptedException {
         textField.sendKeys(text);
-        Thread.sleep(2000);
         expirationDropdown.click();
         expirationOption.click();
-        Thread.sleep(2000);
         pasteTitle.sendKeys(title);
-        Thread.sleep(2000);
         createNewPasteButton.click();
     }
 }
