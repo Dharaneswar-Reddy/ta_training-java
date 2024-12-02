@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class UserRegistrationTest {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         WebDriver driver = BrowserFactory.getDriver();
         driver.get("https://formy-project.herokuapp.com/form");
 
@@ -21,15 +21,12 @@ public class UserRegistrationTest {
 
         WebElement firstNameField = driver.findElement(By.id("first-name"));
         firstNameField.sendKeys(user.getFirstName());
-        Thread.sleep(2000);
 
         WebElement lastNameField = driver.findElement(By.id("last-name"));
         lastNameField.sendKeys(user.getLastName());
-        Thread.sleep(2000);
 
         WebElement jobTitleField = driver.findElement(By.id("job-title"));
         jobTitleField.sendKeys(user.getJobTitle());
-        Thread.sleep(2000);
 
         int educType = switch (user.getEducationLevel()){
             case "High School"-> 1;
@@ -38,7 +35,6 @@ public class UserRegistrationTest {
             default -> throw new IllegalStateException("Unexpected value: " + user.getEducationLevel());
         };
         driver.findElement(By.id("radio-button-%d".formatted(educType))).click();
-        Thread.sleep(2000);
 
         int sexType = switch (user.getSexType()){
             case "Male"-> 1;
@@ -47,7 +43,6 @@ public class UserRegistrationTest {
             default -> throw new IllegalStateException("Unexpected value: " + user.getEducationLevel());
         };
         driver.findElement(By.id("checkbox-%d".formatted(sexType))).click();
-        Thread.sleep(2000);
 
         String experienceRange = user.getYearsOfExperience();
         if (Integer.parseInt(experienceRange) >= 10) experienceRange = ">=10";
@@ -63,15 +58,12 @@ public class UserRegistrationTest {
         WebElement experienceField = driver.findElement(By.id("select-menu"));
         Select select = new Select(experienceField);
         select.selectByIndex(index);
-        Thread.sleep(2000);
 
         WebElement dateField = driver.findElement(By.id("datepicker"));
         dateField.sendKeys(user.getDate());
-        Thread.sleep(2000);
 
         WebElement submitButton = driver.findElement(By.className("btn"));
         submitButton.click();
-        Thread.sleep(5000);
 
         BrowserFactory.quitDriver();
     }
