@@ -13,12 +13,12 @@
         </classes>
     </test>
 
-<!--    <test name="testCloudChrome">-->
-<!--        <classes>-->
-<!--            <class name="com.epam.training.virupakshi_dharaneswar_reddy.CloudCalculatorTest">-->
-<!--                <parameter name="browser" value="chrome"/>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="testCloudChrome">
+        <classes>
+            <class name="com.epam.training.virupakshi_dharaneswar_reddy.CloudCalculatorTest">
+                <parameter name="browser" value="chrome"/>
+            </class>
+        </classes>
+    </test>
 
 </suite>
