@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CloudCostEstimationTest">
+    <listeners>
+        <listener class-name="com.epam.training.virupakshi_dharaneswar_reddy.utils.CustomTestListener"/>
+    </listeners>
+
+    <test name="testCloudEdge">
+        <classes>
+            <class name="com.epam.training.virupakshi_dharaneswar_reddy.CloudCalculatorTest">
+                <parameter name="browser" value="edge"/>
+            </class>
+        </classes>
+    </test>
+
+<!--    <test name="testCloudChrome">-->
+<!--        <classes>-->
+<!--            <class name="com.epam.training.virupakshi_dharaneswar_reddy.CloudCalculatorTest">-->
+<!--                <parameter name="browser" value="chrome"/>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
