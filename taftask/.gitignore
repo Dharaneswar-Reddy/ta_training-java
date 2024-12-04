@@ -42,3 +42,4 @@ build/
 .gitignore
 screenshots
 .vscode/settings.json
+target
